@@ -15,3 +15,4 @@
 - Add MDSveX, Add Markdown articles
 - Add Tailwind typography plugin
 - Plan project
+- Add Tailwind forms plugin
