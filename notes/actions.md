@@ -2,6 +2,10 @@
 
 ## To-do
 
+- Style project
+- Publish "Branding Your PWA"
+- Get indexed in search results
+
 ## 10-29-20
 
 - Initial commit
