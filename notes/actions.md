@@ -16,3 +16,4 @@
 - Add Tailwind typography plugin
 - Add Tailwind forms plugin
 - Plan project
+- Migrate article planning from Notion

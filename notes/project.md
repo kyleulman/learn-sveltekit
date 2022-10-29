@@ -15,5 +15,7 @@
 
 ## Wishlist
 
+- Monthly email digest
+- Tags
 - Pagination
 - Infinite scroll
