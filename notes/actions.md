@@ -4,7 +4,11 @@
 
 ## 10-29-20
 
-- Initial Commit (dev, prod)
-  - Initialize App w/TypeScript, ESLint, Prettier, Playwright
+- Initial commit
+  - Initialize app w/TypeScript, ESLint, Prettier, Playwright
   - Update README
   - Add Tailwind
+- Configure Vercel deployments
+  - Initial deploy from "prod"
+  - Configure "prev" deployments
+  - Ignore deployments from "dev" ([ "$VERCEL_GIT_COMMIT_REF" == dev ])
