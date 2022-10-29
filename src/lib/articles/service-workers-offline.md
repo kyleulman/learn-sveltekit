@@ -29,9 +29,9 @@ const cachePayloadArr = [...build, ...files, ...prerendered];
 const cachePayloadSet = new Set(cachePayloadArr);
 ```
 
--   The worker will refresh the cache if it detects a change in configuration. Assigning a unique identifier to the cache ensures that the worker will use a fresh cache on each build of the app.
--   `version` refers to the timestamp of the current SvelteKit build
--   The `$service-worker` module exports arrays containing static files from the `build` and `static` directories, as well as `prerendered` files. Concatenate the arrays and initialize a `set` object for portability later on.
+- The worker will refresh the cache if it detects a change in configuration. Assigning a unique identifier to the cache ensures that the worker will use a fresh cache on each build of the app.
+- `version` refers to the timestamp of the current SvelteKit build
+- The `$service-worker` module exports arrays containing static files from the `build` and `static` directories, as well as `prerendered` files. Concatenate the arrays and initialize a `set` object for portability later on.
 
 ### Install
 
@@ -46,8 +46,8 @@ self.addEventListener('install', (event) => {
 }
 ```
 
--   After the worker is registered and downloaded, the browser will try to install it. Create the new cache using the uniquely generated `cacheId` and load it with the cache payload array.
--   The `install` step won’t complete until all clients have stopped using a previous worker. Override this with `self.skipWaiting()` to force the worker to activate.
+- After the worker is registered and downloaded, the browser will try to install it. Create the new cache using the uniquely generated `cacheId` and load it with the cache payload array.
+- The `install` step won’t complete until all clients have stopped using a previous worker. Override this with `self.skipWaiting()` to force the worker to activate.
 
 ### Activate
 
@@ -65,7 +65,7 @@ self.addEventListener('activate', (event) => {
 }
 ```
 
--   On `activate`, purge old caches and claim clients that may have been attached to previous workers.
+- On `activate`, purge old caches and claim clients that may have been attached to previous workers.
 
 > `.waitUntil()` tells functional events like `fetch` , `sync` , and `push` to wait for the worker to be installed and activated.
 
@@ -75,11 +75,11 @@ Once the service worker is activated, it can start intercepting requests and cac
 
 ```javascript
 self.addEventListener('fetch', (event) => {
-    // ...
+	// ...
 });
 ```
 
--   The `fetch` event fires any time a file within the scope of the worker is requested.
+- The `fetch` event fires any time a file within the scope of the worker is requested.
 
 First, conduct a series of checks to allow only specified resources to be cached.
 
@@ -89,15 +89,15 @@ First, conduct a series of checks to allow only specified resources to be cached
 // ...
 
 if (event.request.method !== 'GET' || event.request.headers.has('range'))
-    return;
+	return;
 
 // ...
 ```
 
--   Since we are interested in caching only resources tied to navigable routes, ignore any non-`GET` requests.
--   Requests with the `range` header [can be cached](https://web.dev/sw-range-requests/), but are known to cause problems, and the required configuration is out of the scope of this tutorial, so omit them for now.
+- Since we are interested in caching only resources tied to navigable routes, ignore any non-`GET` requests.
+- Requests with the `range` header [can be cached](https://web.dev/sw-range-requests/), but are known to cause problems, and the required configuration is out of the scope of this tutorial, so omit them for now.
 
-### 2. Check that the resource is delivered over `http(s)` , is local to the app, is a static asset, and was cached when the service worker was installed.
+### 2. Check that the resource is delivered over `http(s)`, is local to the app, is a static asset, and was cached when the service worker was installed.
 
 ```javascript
 // ...
@@ -109,26 +109,24 @@ const { isHttp, isLocal, isStaticAsset, isUncached } = checks(event);
 
 ```javascript
 function checks(event) {
-    const url = new URL(event.request.url);
+	const url = new URL(event.request.url);
 
-    const isHttp = url.protocol.startsWith('http');
+	const isHttp = url.protocol.startsWith('http');
 
-    const isLocal =
-        url.hostname === self.location.hostname &&
-        url.port === self.location.port;
+	const isLocal =
+		url.hostname === self.location.hostname && url.port === self.location.port;
 
-    const isStaticAsset =
-        url.host === self.location.host && cachePayloadSet.has(url.pathname);
+	const isStaticAsset =
+		url.host === self.location.host && cachePayloadSet.has(url.pathname);
 
-    const isUncached =
-        event.request.cache === 'only-if-cached' && !isStaticAsset;
+	const isUncached = event.request.cache === 'only-if-cached' && !isStaticAsset;
 
-    return {
-        isHttp,
-        isLocal,
-        isStaticAsset,
-        isUncached,
-    };
+	return {
+		isHttp,
+		isLocal,
+		isStaticAsset,
+		isUncached
+	};
 }
 ```
 
@@ -136,18 +134,17 @@ function checks(event) {
 
 ```javascript
 if (isHttp && isLocal && !isUncached) {
-    event.respondWith(
-        (async () => {
-            const cachedAsset =
-                isStaticAsset && (await caches.match(event.request));
+	event.respondWith(
+		(async () => {
+			const cachedAsset = isStaticAsset && (await caches.match(event.request));
 
-            return cachedAsset || fetchAndCache(event.request);
-        })()
-    );
+			return cachedAsset || fetchAndCache(event.request);
+		})()
+	);
 }
 ```
 
--   If the resource exists in the cache, return it. If it doesn’t, fetch it from the network, cache it, and return the response.
+- If the resource exists in the cache, return it. If it doesn’t, fetch it from the network, cache it, and return the response.
 
 > Use `event.respondWith()` to send the response to the client.
 
@@ -181,24 +178,24 @@ const cachePayloadArr = [...build, ...files, ...prerendered];
 const cachePayloadSet = new Set(cachePayloadArr);
 
 self.addEventListener('install', (event) => {
-    event.waitUntil(
-        caches
-            .open(cacheId)
-            .then((cache) => cache.addAll(cachePayloadArr))
-            .then(() => self.skipWaiting())
-    );
+	event.waitUntil(
+		caches
+			.open(cacheId)
+			.then((cache) => cache.addAll(cachePayloadArr))
+			.then(() => self.skipWaiting())
+	);
 });
 
 self.addEventListener('activate', (event) => {
-    event.waitUntil(
-        caches.keys().then(async (keys) => {
-            for (const key of keys) {
-                if (key !== cacheId) await caches.delete(key);
-            }
+	event.waitUntil(
+		caches.keys().then(async (keys) => {
+			for (const key of keys) {
+				if (key !== cacheId) await caches.delete(key);
+			}
 
-            self.clients.claim();
-        })
-    );
+			self.clients.claim();
+		})
+	);
 });
 
 // prettier-ignore
@@ -258,19 +255,19 @@ function checks(event) {
 }
 
 async function fetchAndCache(request) {
-    const cache = await caches.open(`offline${version}`);
+	const cache = await caches.open(`offline${version}`);
 
-    try {
-        const response = await fetch(request);
-        cache.put(request, response.clone());
+	try {
+		const response = await fetch(request);
+		cache.put(request, response.clone());
 
-        return response;
-    } catch (err) {
-        const response = await cache.match(request);
-        if (response) return response;
+		return response;
+	} catch (err) {
+		const response = await cache.match(request);
+		if (response) return response;
 
-        throw err;
-    }
+		throw err;
+	}
 }
 ```
 

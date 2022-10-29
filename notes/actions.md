@@ -2,7 +2,6 @@
 
 ## To-do
 
-- Style project
 - Publish "Branding Your PWA"
 - Get indexed in search results
 
@@ -22,3 +21,7 @@
 - Plan project
 - Migrate article planning from Notion
 - Add index page
+- Style project
+  - Configure dark/light modes
+  - Add syntax highlighting to code blocks
+  - Alter .prose defaults
