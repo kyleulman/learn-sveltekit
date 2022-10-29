@@ -1,4 +1,14 @@
-<h1>Welcome to SvelteKit</h1>
-<p>
-	Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation
-</p>
+<script lang="ts">
+	export let data;
+
+	const articles = data.articles;
+</script>
+
+<h1>learnsveltekit</h1>
+<ul>
+	{#each articles as a}
+		<li>
+			<a href={a.metadata.slug}>{a.metadata.title}</a>
+		</li>
+	{/each}
+</ul>
