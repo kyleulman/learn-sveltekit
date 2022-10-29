@@ -14,5 +14,5 @@
   - Ignore deployments from "dev" ([ "$VERCEL_GIT_COMMIT_REF" == dev ])
 - Add MDSveX, Add Markdown articles
 - Add Tailwind typography plugin
-- Plan project
 - Add Tailwind forms plugin
+- Plan project

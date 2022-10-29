@@ -9,8 +9,9 @@
 
 - Article search by typing in keywords or questions related to articles
   - Above article index on homepage
-  - If there are no results for a query, give option to ask Kyle directly
+  - Give option to ask Kyle directly
     - Form with a text box for question below search input
+    - Form submissions go to Kyle's email
 
 ## Wishlist
 
