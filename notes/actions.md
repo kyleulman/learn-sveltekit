@@ -2,10 +2,18 @@
 
 ## To-do
 
+- Add JS/TS toggle
+- Style project
+  - Add transition to article hover
+  - Change sans font
 - Publish "Branding Your PWA"
 - Get indexed in search results
 
-## 10-29-20
+## 10-30-22
+
+- Add service worker
+
+## 10-29-22
 
 - Initial commit
   - Initialize app w/TypeScript, ESLint, Prettier, Playwright

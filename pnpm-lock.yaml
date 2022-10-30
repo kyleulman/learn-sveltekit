@@ -6,6 +6,7 @@ specifiers:
   '@sveltejs/kit': next
   '@tailwindcss/forms': ^0.5.3
   '@tailwindcss/typography': ^0.5.7
+  '@types/serviceworker': ^0.0.54
   '@typescript-eslint/eslint-plugin': ^5.41.0
   '@typescript-eslint/parser': ^5.41.0
   autoprefixer: ^10.4.13
@@ -30,6 +31,7 @@ devDependencies:
   '@sveltejs/kit': 1.0.0-next.528_svelte@3.52.0+vite@3.2.1
   '@tailwindcss/forms': 0.5.3_tailwindcss@3.2.1
   '@tailwindcss/typography': 0.5.7_tailwindcss@3.2.1
+  '@types/serviceworker': 0.0.54
   '@typescript-eslint/eslint-plugin': 5.41.0_huremdigmcnkianavgfk3x6iou
   '@typescript-eslint/parser': 5.41.0_wyqvi574yv7oiwfeinomdzmc3m
   autoprefixer: 10.4.13_postcss@8.4.18
@@ -313,6 +315,10 @@ packages:
 
   /@types/semver/7.3.13:
     resolution: {integrity: sha512-21cFJr9z3g5dW8B0CVI9g2O9beqaThGQ6ZFBqHfwhzLDKUxaqTIy3vnfah/UPkfOiF2pLq+tGz+W8RyCskuslw==}
+    dev: true
+
+  /@types/serviceworker/0.0.54:
+    resolution: {integrity: sha512-50qlo1mWGqRTyVb4bDAR1ebDq7/n5bYQKZXCtJuCBpEd9fnqJSX4VRLyw+8TaZsqSRo5y/NWkc9a9dB0iErbPA==}
     dev: true
 
   /@types/unist/2.0.6:
