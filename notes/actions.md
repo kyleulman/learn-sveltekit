@@ -6,7 +6,6 @@
 - Style project
   - Add transition to article hover
   - Change sans font
-- Publish "Branding Your PWA"
 - Get indexed in search results
 
 ## 10-30-22
