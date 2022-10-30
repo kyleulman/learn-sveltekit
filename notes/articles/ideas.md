@@ -3,7 +3,6 @@
 - Integrating MDSveX
 - Integrating Tailwind
 - Learn Web Development with SvelteKit
-- Explaining the "magic" behind SvelteKit
 - Integrating TipTap
 - Integrating Cloudinary
 - Blog with WordPress REST API
