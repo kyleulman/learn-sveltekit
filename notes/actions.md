@@ -13,6 +13,7 @@
 - Get articles from ulman-digital API
 - Change port number to 1337
 - Change url in fetch requests to env
+- Update request headers
 
 ## 10-30-22
 
