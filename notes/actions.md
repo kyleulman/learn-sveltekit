@@ -2,11 +2,8 @@
 
 ## To-do
 
-- Add JS/TS toggle
-- Style project
-  - Add transition to article hover
-  - Change sans font
 - Get indexed in search results
+- Add JS/TS toggle
 
 ## 10-30-22
 
