@@ -3,6 +3,7 @@
 ## To-do
 
 - Get indexed in search results
+- Fix PWA icon on mobile, double title on desktop app
 - Add JS/TS toggle
 
 ## 10-30-22
