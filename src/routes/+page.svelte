@@ -9,7 +9,7 @@
 <Head
 	page={{
 		title: 'Home',
-		description: "Explore what's possible with SvelteKit",
+		description: "Explore what's possible with SvelteKit.",
 		url: `${import.meta.env.VITE_CLIENT_URL}`
 	}}
 />
