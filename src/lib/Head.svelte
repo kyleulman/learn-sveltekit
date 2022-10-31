@@ -40,8 +40,18 @@
 	<meta property="og:type" content={page.type || site.type} />
 
 	<!-- Twitter -->
+	<meta property="twitter:title" content={page.title || site.title} />
+	<meta
+		property="twitter:description"
+		content={page.description || site.description}
+	/>
 	<meta property="twitter:card" content={site.twitter_card} />
-	<meta name="twitter:creator" content={'@' + site.twitter_handle} />
+	<meta property="twitter:image" content={page.image_src || site.image_src} />
+	<meta
+		property="twitter:image:alt"
+		content={page.image_alt || site.image_alt}
+	/>
+	<meta name="twitter:site" content={'@' + site.twitter_handle} />
 
 	<slot />
 </svelte:head>
