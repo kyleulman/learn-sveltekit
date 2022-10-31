@@ -17,7 +17,7 @@
 />
 
 <article
-	class="prose prose-zinc prose-code:rounded prose-code:bg-emerald-200 prose-code:p-1 prose-code:before:hidden prose-code:after:hidden dark:prose-invert dark:prose-code:bg-emerald-900"
+	class="prose prose-zinc prose-blockquote:border-emerald-900 prose-code:p-1 prose-code:before:hidden prose-code:after:hidden prose-li:marker:text-emerald-900 dark:prose-invert dark:prose-blockquote:border-emerald-200 dark:prose-li:marker:text-emerald-200"
 >
 	<Article />
 </article>

@@ -3,7 +3,9 @@
 </script>
 
 <header class="my-8">
-	<h1 class="text-2xl"><a href="/">learnsveltekit</a></h1>
+	<h1 class="text-2xl">
+		<a href="/" class="dark:text-emerald-200">learnsveltekit</a>
+	</h1>
 </header>
 <main class="grow">
 	<slot />
