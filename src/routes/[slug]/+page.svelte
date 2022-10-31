@@ -4,8 +4,6 @@
 
 	export let data;
 
-	console.log(data);
-
 	const metadata = data?.article.metadata;
 	const html = data?.article.body.html;
 </script>

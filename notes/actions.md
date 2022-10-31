@@ -11,6 +11,7 @@
 - Add robots.txt, handle non-article pages
 - Migrate articles to ulman-digital
 - Get articles from ulman-digital API
+- Change port number to 1337
 
 ## 10-30-22
 
