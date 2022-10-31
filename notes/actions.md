@@ -14,6 +14,7 @@
 - Add metadata component
 - Update font
 - Add icons & card, manifest.json, update description
+- Fix Twitter card
 
 ## 10-29-22
 
