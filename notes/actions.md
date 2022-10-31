@@ -13,7 +13,7 @@
 - Add service worker
 - Add metadata component
 - Update font
-- Update icons & card, add manifest.json, update description
+- Add icons & card, manifest.json, update description
 
 ## 10-29-22
 
