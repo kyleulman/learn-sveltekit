@@ -11,6 +11,7 @@
 ## 10-30-22
 
 - Add service worker
+- Update articles
 
 ## 10-29-22
 
