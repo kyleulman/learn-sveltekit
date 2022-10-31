@@ -12,6 +12,7 @@
 
 - Add service worker
 - Add metadata component
+- Update font
 - Update logo
 
 ## 10-29-22
