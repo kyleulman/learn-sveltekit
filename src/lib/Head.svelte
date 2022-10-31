@@ -40,7 +40,7 @@
 	<meta property="og:type" content={page.type || site.type} />
 
 	<!-- Twitter -->
-	<meta property="twitter:title" content={page.title || site.title} />
+	<meta property="twitter:title" content={title} />
 	<meta
 		property="twitter:description"
 		content={page.description || site.description}
