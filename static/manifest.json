@@ -1,0 +1,28 @@
+{
+	"short_name": "Learn SvelteKit",
+	"name": "Learn SvelteKit",
+	"icons": [
+		{
+			"src": "/icon-svg.svg",
+			"type": "image/svg+xml",
+			"sizes": "512x512"
+		},
+		{
+			"src": "/icon-192.png",
+			"type": "image/png",
+			"sizes": "192x192"
+		},
+		{
+			"src": "/icon-512.png",
+			"type": "image/png",
+			"sizes": "512x512"
+		}
+	],
+	"id": "/?source=pwa",
+	"start_url": "/?source=pwa",
+	"scope": "/",
+	"background_color": "#18181B",
+	"theme_color": "#A7F3D0",
+	"display": "standalone",
+	"description": "Documenting what's possible with SvelteKit."
+}
