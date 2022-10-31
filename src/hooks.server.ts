@@ -7,8 +7,6 @@ export const handle: Handle = async ({ event, resolve }) => {
 	 * resolve(): renders the route, generates Response
 	 */
 
-	console.log(event.params);
-
 	event.locals = {
 		info: 'Some information to be passed to server-only routes'
 	};

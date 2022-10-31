@@ -2,11 +2,13 @@
 
 ## To-do
 
-- Get indexed in search results
 - Fix PWA icon on mobile, double title on desktop app
 - Add JS/TS toggle
 
 ## 10-31-22
+
+- Start notes for hooks article
+- Add robots.txt, handle non-article pages
 
 ## 10-30-22
 
