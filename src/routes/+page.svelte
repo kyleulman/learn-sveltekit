@@ -1,8 +1,18 @@
 <script lang="ts">
+	import Head from '$lib/Head.svelte';
+
 	export let data;
 
 	const articles = data.articles;
 </script>
+
+<Head
+	page={{
+		title: 'Home',
+		description: "Explore what's possible with SvelteKit",
+		url: `${import.meta.env.VITE_CLIENT_URL}`
+	}}
+/>
 
 <section id="articles">
 	<ul class="space-y-4">
