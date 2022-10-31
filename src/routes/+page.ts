@@ -1,26 +1,11 @@
 import type { PageLoad } from './$types';
 
-export const load: PageLoad = async () => {
-	const modules = import.meta.glob('../lib/articles/*.md');
+export const load: PageLoad = async ({ fetch }) => {
+	const RES = await fetch('http://localhost:5173/learn-sveltekit');
 
-	let articles: Array<object> = [];
-
-	for (const path in modules) {
-		const slug = path.replace(/\.\.\/lib\/articles\/|\.md/gm, '');
-
-		// TODO: Type this more correctly
-		// eslint-disable-next-line @typescript-eslint/no-explicit-any
-		const mod: any = await modules[path]();
-
-		articles = [
-			...articles,
-			{
-				metadata: { ...mod.metadata, slug }
-			}
-		];
-	}
+	const RET = await RES.json();
 
 	return {
-		articles
+		articles: RET
 	};
 };

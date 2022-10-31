@@ -4,22 +4,22 @@
 
 	export let data;
 
-	const Article = data?.Article;
-	const metadata = data?.metadata;
+	console.log(data);
+
+	const metadata = data?.article.metadata;
+	const html = data?.article.body.html;
 </script>
 
-{#if metadata && Article}
-	<Head
-		page={{
-			title: metadata.title,
-			description: metadata.description,
-			url: `${import.meta.env.VITE_CLIENT_URL}/${metadata.slug}`
-		}}
-	/>
+<Head
+	page={{
+		title: metadata.title,
+		description: metadata.description,
+		url: `${import.meta.env.VITE_CLIENT_URL}/${metadata.slug}`
+	}}
+/>
 
-	<article
-		class="prose prose-zinc prose-blockquote:border-emerald-900 prose-code:p-1 prose-code:before:hidden prose-code:after:hidden prose-li:marker:text-emerald-900 dark:prose-invert dark:prose-blockquote:border-emerald-200 dark:prose-li:marker:text-emerald-200"
-	>
-		<Article />
-	</article>
-{/if}
+<article
+	class="prose prose-zinc prose-blockquote:border-emerald-900 prose-code:p-1 prose-code:before:hidden prose-code:after:hidden prose-li:marker:text-emerald-900 dark:prose-invert dark:prose-blockquote:border-emerald-200 dark:prose-li:marker:text-emerald-200"
+>
+	{@html html}
+</article>

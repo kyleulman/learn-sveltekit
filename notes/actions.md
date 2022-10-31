@@ -10,6 +10,7 @@
 - Start notes for hooks article
 - Add robots.txt, handle non-article pages
 - Migrate articles to ulman-digital
+- Get articles from ulman-digital API
 
 ## 10-30-22
 
