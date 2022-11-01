@@ -2,6 +2,8 @@
 
 ## To-do
 
+- Speed up calls to API
+  - prefetch
 - Fix PWA icon on mobile, double title on desktop app
 - Add JS/TS toggle
 
