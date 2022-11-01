@@ -1,8 +1,8 @@
 export interface Metadata {
 	title: string;
 	description: string;
-	slug: string;
 	url: string;
+	slug?: string;
 	image_src?: string;
 	image_alt?: string;
 	twitter_card?: string;

@@ -5,6 +5,11 @@
 - Fix PWA icon on mobile, double title on desktop app
 - Add JS/TS toggle
 
+# 11-01-22
+
+- Add "slug" to "metadata" interface
+- Update data prop to match API response
+
 ## 10-31-22
 
 - Start notes for hooks article
