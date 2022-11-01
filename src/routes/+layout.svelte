@@ -10,6 +10,6 @@
 <main class="grow">
 	<slot />
 </main>
-<footer class="my-4">
+<footer class="my-4 mt-12">
 	&copy; {new Date().getFullYear()} Kyle Ulman
 </footer>

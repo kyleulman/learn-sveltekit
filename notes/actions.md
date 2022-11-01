@@ -9,6 +9,7 @@
 
 - Add "slug" to "metadata" interface
 - Update data prop to match API response
+- Add more space between 'main' and 'footer'
 
 ## 10-31-22
 
