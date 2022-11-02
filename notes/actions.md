@@ -3,6 +3,7 @@
 ## To-do
 
 - Add JS/TS toggle
+- Fix double title in desktop PWA
 
 ## 11-02-22
 
