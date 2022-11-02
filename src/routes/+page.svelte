@@ -19,6 +19,7 @@
 		{#each articles as a}
 			<li>
 				<a
+					data-sveltekit-prefetch
 					class="-ml-2 block rounded p-2 underline transition hover:bg-zinc-900 hover:text-zinc-50  dark:hover:bg-emerald-200 dark:hover:text-zinc-900"
 					href={a.slug}>{a.title}</a
 				>

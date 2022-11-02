@@ -2,14 +2,12 @@
 
 ## To-do
 
-- Speed up calls to API
-  - prefetch
 - Fix PWA icon on mobile
 - Add JS/TS toggle
 
 ## 11-02-22
 
-- Fix double title on PWA window
+- Add prefetch to article links
 
 ## 11-01-22
 
