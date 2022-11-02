@@ -3,12 +3,12 @@
 ## To-do
 
 - Add JS/TS toggle
-- Fix double title in desktop PWA
 
 ## 11-02-22
 
 - Add prefetch to article links
 - Fix maskable icons on mobile
+- Fix double title in desktop PWA
 
 ## 11-01-22
 
