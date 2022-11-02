@@ -2,12 +2,12 @@
 
 ## To-do
 
-- Fix PWA icon on mobile
 - Add JS/TS toggle
 
 ## 11-02-22
 
 - Add prefetch to article links
+- Fix maskable icons on mobile
 
 ## 11-01-22
 
