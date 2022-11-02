@@ -3,6 +3,7 @@
 ## To-do
 
 - Add JS/TS toggle
+- Add package manager toggle
 
 ## 11-02-22
 
