@@ -1,6 +1,6 @@
 {
 	"short_name": "Learn SvelteKit",
-	"name": "L+SK",
+	"name": "Learn SvelteKit PWA",
 	"icons": [
 		{
 			"src": "/icon-svg.svg",
