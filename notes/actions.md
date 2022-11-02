@@ -4,10 +4,14 @@
 
 - Speed up calls to API
   - prefetch
-- Fix PWA icon on mobile, double title on desktop app
+- Fix PWA icon on mobile
 - Add JS/TS toggle
 
-# 11-01-22
+## 11-02-22
+
+- Fix double title on PWA window
+
+## 11-01-22
 
 - Add "slug" to "metadata" interface
 - Update data prop to match API response
