@@ -2,7 +2,8 @@ import { error } from '@sveltejs/kit';
 
 export const req = async (
 	url: RequestInfo | URL,
-	options?: RequestInit | undefined
+	options?: RequestInit | undefined,
+	fetch?: any
 ) => {
 	try {
 		if (typeof url === 'string' && url.startsWith('/')) {
@@ -19,9 +20,9 @@ export const req = async (
 			}
 		};
 
-		const res = await fetch(url, options);
+		const RES = await fetch(url, options);
 
-		return await res.json();
+		return await RES.json();
 	} catch (err) {
 		throw error(400, { message: err?.toString() || 'Fetch unsuccessful.' });
 	}

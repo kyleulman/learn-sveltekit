@@ -48,6 +48,7 @@
   - Document service worker global type (@types/serviceworker)
   - Update description
   - Add request wrapper
+- Fix request wrapper
 
 ## 11-02-22
 
