@@ -5,7 +5,7 @@
 - Add JS/TS toggle
 - Add package manager toggle
 
-## 11-03-22
+## 11-04-22
 
 - Test Font Load (font-local)
   - Add fonts locally
@@ -42,6 +42,7 @@
       - 609ms
 - Test icons png vs webp
 - Convert icons to webp
+- Find more readable syntax highlighting
 
 ## 11-02-22
 
