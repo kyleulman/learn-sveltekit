@@ -3,26 +3,26 @@
 	"name": "Learn SvelteKit PWA",
 	"icons": [
 		{
-			"src": "icons/512.svg",
-			"type": "image/svg+xml",
+			"src": "icons/512.webp",
+			"type": "image/webp",
 			"sizes": "512x512",
 			"purpose": "any"
 		},
 		{
-			"src": "icons/512.svg",
-			"type": "image/svg+xml",
+			"src": "icons/512.webp",
+			"type": "image/webp",
 			"sizes": "512x512",
 			"purpose": "maskable"
 		},
 		{
-			"src": "icons/192.svg",
-			"type": "image/svg+xml",
+			"src": "icons/192.webp",
+			"type": "image/webp",
 			"sizes": "192x192",
 			"purpose": "any"
 		},
 		{
-			"src": "icons/192.svg",
-			"type": "image/svg+xml",
+			"src": "icons/192.webp",
+			"type": "image/webp",
 			"sizes": "192x192",
 			"purpose": "maskable"
 		}

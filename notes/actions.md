@@ -40,7 +40,7 @@
       - 581ms
       - 712ms
       - 609ms
-- Convert icons to SVG
+- Test icons png vs webp
 
 ## 11-02-22
 
