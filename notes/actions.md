@@ -40,6 +40,7 @@
       - 581ms
       - 712ms
       - 609ms
+- Convert icons to SVG
 
 ## 11-02-22
 
