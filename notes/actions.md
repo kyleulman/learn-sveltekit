@@ -5,6 +5,11 @@
 - Add JS/TS toggle
 - Add package manager toggle
 
+## 11-03-22
+
+- Test Font Load (font-local)
+  - Add fonts locally
+
 ## 11-02-22
 
 - Add prefetch to article links

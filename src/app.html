@@ -11,8 +11,21 @@
 		<link rel="manifest" href="%sveltekit.assets%/manifest.json" />
 		<meta name="theme-color" content="#A7F3D0" />
 		<!-- Our Lord and Savior - https://rsms.me/inter/ -->
-		<link rel="preconnect" href="https://rsms.me/" />
-		<link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+		<style>
+			@font-face {
+				font-family: 'Inter';
+				font-weight: 400;
+				src: url('/Inter-Regular.woff2') format('woff2');
+				display: swap;
+			}
+
+			@font-face {
+				font-family: 'Inter';
+				font-weight: 800;
+				src: url('/Inter-ExtraBold.woff2') format('woff2');
+				display: swap;
+			}
+		</style>
 		%sveltekit.head%
 	</head>
 	<body
