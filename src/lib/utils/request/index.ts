@@ -20,7 +20,11 @@ export const req = async (
 			}
 		};
 
+		console.log(options);
+
 		const RES = await fetch(url, options);
+
+		console.log(RES);
 
 		return await RES.json();
 	} catch (err) {
