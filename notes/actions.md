@@ -41,6 +41,7 @@
       - 712ms
       - 609ms
 - Test icons png vs webp
+- Convert icons to webp
 
 ## 11-02-22
 
