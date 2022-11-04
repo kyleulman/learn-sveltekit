@@ -10,8 +10,30 @@
 - Test Font Load (font-local)
   - Add fonts locally
   - Compare local vs remote
-    - Local - 881ms
-    - Remote - 1213ms
+    - Local - 881ms / 503ms
+      - 2390ms
+      - 545ms
+      - 510ms
+      - 476ms
+      - 483ms
+    - Remote - 1213ms / 932ms
+      - 2340ms
+      - 1500ms
+      - 874ms
+      - 670ms
+      - 683ms
+    - Local 2 - 1034ms / 837ms
+      - 602 ms
+      - 580 ms
+      - 996 ms
+      - 1820 ms
+      - 1170 ms
+    - Local 3 - 580ms
+      - 717
+      - 556
+      - 562
+      - 499
+      - 564
 
 ## 11-02-22
 
