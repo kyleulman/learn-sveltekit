@@ -1,7 +1,5 @@
 <script lang="ts">
 	import Head from '$lib/Head.svelte';
-	import './syntax-highlighting.css';
-
 	export let data;
 
 	const metadata = data?.article.metadata;
