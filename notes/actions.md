@@ -9,6 +9,9 @@
 
 - Test Font Load (font-local)
   - Add fonts locally
+  - Compare local vs remote
+    - Local - 881ms
+    - Remote - 1213ms
 
 ## 11-02-22
 
