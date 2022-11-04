@@ -2,6 +2,8 @@
 	import Head from '$lib/Head.svelte';
 	export let data;
 
+	import '$lib/highlight.css';
+
 	const metadata = data?.article.metadata;
 	const body = data?.article.body;
 </script>
