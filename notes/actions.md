@@ -43,6 +43,11 @@
 - Test icons png vs webp
 - Convert icons to webp
 - Find more readable syntax highlighting
+- General refactor
+  - Remove hooks file
+  - Document service worker global type (@types/serviceworker)
+  - Update description
+  - Add request wrapper
 
 ## 11-02-22
 

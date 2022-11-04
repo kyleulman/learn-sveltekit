@@ -1,5 +1,6 @@
 import { build, files, prerendered, version } from '$service-worker';
 
+// @types/serviceworker
 declare const self: ServiceWorkerGlobalScope;
 
 // Generate access key for new cache

@@ -1,15 +1,8 @@
+import { req } from '$lib/utils/request';
 import type { PageLoad } from './$types';
 
-export const load: PageLoad = async ({ fetch }) => {
-	const RES = await fetch(`${import.meta.env.VITE_API_URL}/learn-sveltekit`, {
-		headers: {
-			accept: 'application/json'
-		}
-	});
-
-	const RET = await RES.json();
-
+export const load: PageLoad = async () => {
 	return {
-		articles: RET
+		articles: await req(`/learn-sveltekit`)
 	};
 };

@@ -2,4 +2,4 @@
 
 _https://www.learnsveltekit.com_
 
-Documenting what's possible with SvelteKit.
+A documentation of what's possible with SvelteKit.
