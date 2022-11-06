@@ -5,6 +5,14 @@
 - Add JS/TS toggle
 - Add package manager toggle
 
+## 11-06-22
+
+- Add basic query filter
+
+## 11-05-22
+
+- Add search section, form handler
+
 ## 11-04-22
 
 - Test Font Load (font-local)

@@ -1,22 +1,35 @@
 <script lang="ts">
+	import type { PageData } from './$types';
 	import Head from '$lib/Head.svelte';
 
-	export let data;
+	export let data: PageData;
 
-	const articles = data.articles;
-
+	let articles = data.articles;
 	let timeout: NodeJS.Timeout;
+
+	interface Article {
+		title: string;
+		description: string;
+		slug: string;
+	}
 
 	function handleSubmit(this: HTMLFormElement) {
 		clearTimeout(timeout);
 
 		timeout = setTimeout(async () => {
-			const data = new FormData(this);
+			const query = this.query.value;
 
-			await fetch(this.action, {
-				method: 'POST',
-				body: data
+			articles = data.articles.filter((article: Article) => {
+				if (article.title.includes(query)) return article;
+				if (query === '') return data.articles;
+				return null;
 			});
+
+			// const data = new FormData(this);
+			// await fetch(this.action, {
+			// 	method: 'POST',
+			// 	body: data
+			// });
 		}, 1000);
 	}
 </script>
