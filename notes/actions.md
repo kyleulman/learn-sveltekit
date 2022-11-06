@@ -2,6 +2,7 @@
 
 ## To-do
 
+- Style search input
 - Add JS/TS toggle
 - Add package manager toggle
 
