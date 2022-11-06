@@ -1,27 +1,31 @@
 import { error } from '@sveltejs/kit';
 
+type Input = RequestInfo | URL;
+type Init = RequestInit | undefined;
+
 export const req = async (
-	url: RequestInfo | URL,
-	opts?: RequestInit | undefined,
-	fetch?: any
+	input: Input,
+	init: Init,
+	fetch: (input: Input, init: Init) => Promise<Response>
 ) => {
 	try {
-		if (typeof url === 'string' && url.startsWith('/')) {
-			url = `${import.meta.env.VITE_API_URL}${url}`;
+		if (typeof input === 'string' && input.startsWith('/')) {
+			input = `${import.meta.env.VITE_API_URL}${input}`;
 		}
 
 		const options: RequestInit = {
-			method: opts?.method || 'GET',
+			method: init?.method || 'GET',
 			headers: {
 				'content-type': 'application/json',
 				accept: 'application/json',
-				...opts?.headers
+				...init?.headers
 			}
 		};
 
-		if (opts?.body) options.body = opts?.body;
+		if (init?.body) options.body = init?.body;
 
-		const RES = await fetch(url, opts);
+		const RES = await fetch(input, init);
+
 		return await RES.json();
 	} catch (err) {
 		throw error(400, { message: err?.toString() || 'Fetch unsuccessful.' });
