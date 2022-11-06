@@ -4,6 +4,21 @@
 	export let data;
 
 	const articles = data.articles;
+
+	let timeout: NodeJS.Timeout;
+
+	function handleSubmit(this: HTMLFormElement) {
+		clearTimeout(timeout);
+
+		timeout = setTimeout(async () => {
+			const data = new FormData(this);
+
+			await fetch(this.action, {
+				method: 'POST',
+				body: data
+			});
+		}, 1000);
+	}
 </script>
 
 <Head
@@ -13,6 +28,15 @@
 		url: `${import.meta.env.VITE_CLIENT_URL}`
 	}}
 />
+
+<section id="search">
+	<form method="POST" on:input|preventDefault={handleSubmit}>
+		<div class="flex items-center gap-1">
+			<label for="query"> Search </label>
+			<input type="text" name="query" id="query" class="grow bg-zinc-800" />
+		</div>
+	</form>
+</section>
 
 <section id="articles">
 	<ul class="space-y-4">

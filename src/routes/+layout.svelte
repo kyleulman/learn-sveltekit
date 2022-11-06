@@ -7,7 +7,7 @@
 		<a href="/" class="dark:text-emerald-200">learnsveltekit</a>
 	</h1>
 </header>
-<main class="grow">
+<main class="grow space-y-4">
 	<slot />
 </main>
 <footer class="my-4 mt-12">
