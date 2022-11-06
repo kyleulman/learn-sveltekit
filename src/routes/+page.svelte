@@ -13,24 +13,18 @@
 		slug: string;
 	}
 
-	function handleSubmit(this: HTMLFormElement) {
+	function handleSearch(this: HTMLFormElement) {
 		clearTimeout(timeout);
 
 		timeout = setTimeout(async () => {
-			const query = this.query.value;
+			const query = this.query.value.toLowerCase();
 
 			articles = data.articles.filter((article: Article) => {
-				if (article.title.includes(query)) return article;
+				if (article.title.toLowerCase().includes(query)) return article;
 				if (query === '') return data.articles;
 				return null;
 			});
-
-			// const data = new FormData(this);
-			// await fetch(this.action, {
-			// 	method: 'POST',
-			// 	body: data
-			// });
-		}, 1000);
+		}, 250);
 	}
 </script>
 
@@ -43,8 +37,8 @@
 />
 
 <section id="search">
-	<form method="POST" on:input|preventDefault={handleSubmit}>
-		<div class="flex items-center gap-1">
+	<form on:input|preventDefault={handleSearch}>
+		<div class="flex items-center gap-3">
 			<label for="query"> Search </label>
 			<input type="text" name="query" id="query" class="grow bg-zinc-800" />
 		</div>

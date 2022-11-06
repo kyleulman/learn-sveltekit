@@ -8,6 +8,7 @@
 ## 11-06-22
 
 - Add basic query filter
+- Make query case-insensitive
 
 ## 11-05-22
 
